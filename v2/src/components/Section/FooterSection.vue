@@ -8,15 +8,9 @@ footer#footer.footer
         img(loading='lazy' src='@/assets/images/logo-rectangle/4.png' alt='Cooperify Logo')
       a.holding-info.footer-links-item(href="#") A company of Osiz Limited
       ul.footer-links
-        li
-          a.footer-links-item(href='#')
-            ion-icon.footer-links-item-icon(name='logo-instagram')
-        li
-          a.footer-links-item(href='#')
-            ion-icon.footer-links-item-icon(name='logo-facebook')
-        li
-          a.footer-links-item(href='#')
-            ion-icon.footer-links-item-icon(name='logo-twitter')
+        li(v-for="icon in getSocialMediaAccounts()", :key="icon.id")
+          a.footer-links-item(:href="icon.path")
+            ion-icon.footer-links-item-icon(:name="icon.icon")
       p.footer-copyright
         | Copyright &copy; 
         span.year {{ new Date().getFullYear() }}
@@ -30,47 +24,16 @@ footer#footer.footer
           | 623 Harrison St., 2nd Floor, San Francisco, CA 94107
         p
           a.footer-links-item(href='#') +44 123 654 789
-          br
+        p
           a.footer-links-item(href='mailto:osman@osizagency.com')
             | osman@osizagency.com
     // ! FOOTER COLUMN END
-    // ! FOOTER COLUMN START
-    div.footer__column--navigation
-      p.heading-footer Account
+
+    div.footer__column--navigation(v-for="(value, key, index) in getFooterMenu()", :key="footerMenu")
+      p.heading-footer {{ key }}
       ul.nav-footer
-        li
-          a.footer-links-item(href='#') Create account
-        li
-          a.footer-links-item(href='#') Sign in
-        li
-          a.footer-links-item(href='#') IOS app
-        li
-          a.footer-links-item(href='#') Android app
-    // ! FOOTER COLUMN END
-    // ! FOOTER COLUMN START
-    div.footer__column--navigation
-      p.heading-footer Company
-      ul.nav-footer
-        li
-          a.footer-links-item(href='#') About Cooperify
-        li
-          a.footer-links-item(href='#') For Business
-        li
-          a.footer-links-item(href='#') Coaches
-        li
-          a.footer-links-item(href='#') Careers
-    // ! FOOTER COLUMN END
-    // ! FOOTER COLUMN START
-    div.footer__column--navigation
-      p.heading-footer Resources
-      ul.nav-footer
-        li
-          a.footer-links-item(href='#') Recipe directory
-        li
-          a.footer-links-item(href='#') Help center
-        li
-          a.footer-links-item(href='#') Privacy &amp; terms
-    // ! FOOTER COLUMN END
+        li(v-for="link in value")
+          a.footer-links-item(:href="link.target") {{ link.name }}
 // ! FOOTER SECTION END
 </template>
 <style lang="scss">
@@ -107,12 +70,12 @@ footer#footer.footer
   &-logo {
     display: block;
     margin-bottom: 1.6rem;
-    
+
     & img {
       width: 100%;
     }
   }
-  
+
   &-copyright {
     font-size: 1.4rem;
     line-height: 1.6;
@@ -125,13 +88,13 @@ footer#footer.footer
   display: flex;
   flex-direction: row;
   gap: 2.4rem;
-  
+
   &-item {
     &-icon {
       width: 2.4rem;
       height: 2.4rem;
     }
-    
+
     &:link,
     &:visited {
       color: variables.$color-gray-6;
@@ -139,7 +102,7 @@ footer#footer.footer
       font-size: 1.6rem;
       transition: all 0.3s;
     }
-    
+
     &:hover,
     &:active {
       color: variables.$color-gray-1;
@@ -164,7 +127,20 @@ footer#footer.footer
   font-size: 1.6rem;
   margin-bottom: 1.6rem;
 }
+
+.heading-footer {
+  text-transform: capitalize;
+}
 </style>
 <script setup>
+import { useStore } from 'vuex';
 
+const store = useStore();
+
+const getSocialMediaAccounts = () => {
+  return store.getters._getSocialMediaAccounts;
+}
+const getFooterMenu = () => {
+  return store.getters._getFooterMenu;
+}
 </script>

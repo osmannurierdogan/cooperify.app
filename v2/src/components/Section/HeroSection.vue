@@ -4,13 +4,11 @@ section#hero.section-hero
   .hero-container
     // ? grid grid--2-cols
     .hero-text-box
-      h1.heading-primary
-        | All-in-one self improvement and productivity app!
-      p.hero-description
-        | Simple application to transform your life. Tailored to your personal knowledge level. Helps you to go from zero to hero by improving your knowledge, productivity, focus and most importantly your willpower!
+      h1.heading-primary {{ props.sectionContent.title }}
+        //- | All-in-one self improvement and productivity app!
+      p.hero-description(v-html="props.sectionContent.description")
       div.hero-buttons
-        ButtonComponent(:buttonProps="{class: 'button button--full', text: 'Get access', destination:'https://portal.cooperify.app/'}")
-        ButtonComponent(:buttonProps="{class: 'button button--outline', text: 'Learn more', destination:'#how', icon:'fa-solid fa-arrow-down-long'}")
+        ButtonComponent(v-for="button in props.sectionContent.buttons", :key="button.id", :buttonProps="button")
       .features-delivered
         .features-delivered__images
           img(loading='lazy' src='@/assets/images/customers/customer-1.jpg' alt='Customer Photo')
@@ -19,13 +17,20 @@ section#hero.section-hero
           img(loading='lazy' src='@/assets/images/customers/customer-4.jpg' alt='Customer Photo')
           img(loading='lazy' src='@/assets/images/customers/customer-5.jpg' alt='Customer Photo')
           img(loading='lazy' src='@/assets/images/customers/customer-6.jpg' alt='Customer Photo')
-        p.features-delivered__text #[span 100+] users changed their lives
+        p.features-delivered__text #[span {{ props.sectionContent.userCount }}+] users changed their lives
     .hero-image-box
       img.hero-image(loading='lazy' src='@/assets/images/hero.png' alt='Woman enjoying food, features in storage container, and food bowls on a table.')
 // ! SECTION HERO END
 </template>
 <script setup>
 import ButtonComponent from '../Button/ButtonComponent.vue';
+
+const props = defineProps({
+  sectionContent: {
+    type: Object,
+    required: true,
+  }
+})
 </script>
 <style lang="scss">
 .hero {

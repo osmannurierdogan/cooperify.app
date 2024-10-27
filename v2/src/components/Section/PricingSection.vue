@@ -5,7 +5,7 @@ section#price.section-pricing
   div.container
     span.heading-sub Pricing
     h2.heading-secondary
-      | Self improvement without breaking the bank
+      | Self improvement without going broke
   // ! SECTION PRICING TITLE END
   // ! SECTION PRICING PLAN BOX START
   div.container.grid.grid--2-cols.grid--align-center.margin-bottom-medium

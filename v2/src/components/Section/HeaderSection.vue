@@ -5,26 +5,26 @@ header.header
     //- h1.header__logo-text Cooperify
   nav.nav-main
     ul.nav-main__list
-      li
-        a.nav-main__link(href='#how') How it works
-      //- li
-        a.nav-main__link(href='#features') Features
-      li
-        a.nav-main__link(href='#testimonials') Testimonials
-      li
-        a.nav-main__link(href='#price') Pricing
-      li
-        a.nav-main__link.nav-main__cta(href='https://portal.cooperify.app/') Try for free
+      li(v-for="item in getNavigationMenu()", :key="item.id")
+        a.nav-main__link(v-if="item.path == null && item.target != null", :href="item.target") {{ item.name }}
+        a.nav-main__link.nav-main__linkish-button(v-else, :href="item.path") {{ item.name }}
   button.mobile-navigation-button#mobile-navigation-button(@click="enableMobileMenu()")
     ion-icon.mobile-navigation-button-icon(name='menu-outline')
     ion-icon.mobile-navigation-button-icon(name='close-outline')
 
 </template>
 <script setup>
+import { useStore } from 'vuex';
 // const mobileNavigationButton = document.getElementById("mobile-navigation-button");
 // const mobileNavigationButton = document.querySelector(
 //   ".mobile-navigation-button",
 // );
+
+const store = useStore();
+
+const getNavigationMenu = () => {
+  return store.getters._getNavigationMenu;
+}
 
 const enableMobileMenu = () => {
   const header = document.querySelector(".header");
@@ -135,7 +135,8 @@ const enableMobileMenu = () => {
       }
     }
 
-    &__cta {
+    &__cta,
+    &__linkish-button {
 
       &:visited,
       &:link {
