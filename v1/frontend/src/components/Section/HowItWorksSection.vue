@@ -5,7 +5,7 @@ section#how.section-how
   div.container
     span.heading-sub  How it works 
     h2.heading-secondary
-      | Your self improvement process in 6 simple steps
+      | Your self improvement process in 5 simple steps
   // ! HOW IT WORKS TITLE CONTAINER END
   // ! HOW IT WORKS CONTENT CONTAINER START
   div.container

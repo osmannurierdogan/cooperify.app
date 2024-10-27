@@ -1,29 +1,29 @@
 <template lang="pug">
-// ! SECTION MEALS START
+// ! SECTION FEATURES START
 section#features.section-features
-  // ! SECTION MEAL TITLE START
+  // ! SECTION FEATURE TITLE START
   .container.center-text
-    span.heading-sub Meals
+    span.heading-sub Features
     h1.heading-secondary
-      | Omnifood AI chooses from 5,000+ recipes
-  // ! SECTION MEAL TITLE END
+      | Books & Challenges & Habits & Timers
+  // ! SECTION FEATURE TITLE END
   .container.grid.grid--3-cols.margin-bottom-medium
-    // ! MEAL ITEM START
+    // ! FEATURE ITEM START
     .meal
-      // ! MEAL ITEM IMAGE START
+      // ! FEATURE ITEM IMAGE START
       .meal__image-box
         img.meal-image(loading='lazy' src='@/assets/images/features/meal-1.jpg' alt='Japanese Gyozas Image')
-      // ! MEAL ITEM IMAGE END
-      // ! MEAL ITEM CONTENT START
+      // ! FEATURE ITEM IMAGE END
+      // ! FEATURE ITEM CONTENT START
       .meal-content
-        // ! MEAL TAGS START
+        // ! FEATURE TAGS START
         .meal-tags
           span.meal-tag.meal-tag--vegetarian Vegetarian
-        // ! MEAL TAGS END
+        // ! FEATURE TAGS END
         p.meal-title Japanese Gyozas
-        // ! MEAL ATTRIBUTES BOX START
+        // ! FEATURE ATTRIBUTES BOX START
         ul.meal-attributes
-          // ! MEAL ATTRIBUTE START
+          // ! FEATURE ATTRIBUTE START
           li.meal-attribute
             ion-icon.meal-icon(name='flame-outline')
             //
@@ -32,42 +32,42 @@ section#features.section-features
             span
               strong.meal-attribute__strong 650
               |                     calories
-          // ! MEAL ATTRIBUTE END
-          // ! MEAL ATTRIBUTE START
+          // ! FEATURE ATTRIBUTE END
+          // ! FEATURE ATTRIBUTE START
           li.meal-attribute
             ion-icon.meal-icon(name='restaurant-outline')
             span
               | NutriScore &reg;
               strong.meal-attribute__strong 74
-          // ! MEAL ATTRIBUTE END
-          // ! MEAL ATTRIBUTE START
+          // ! FEATURE ATTRIBUTE END
+          // ! FEATURE ATTRIBUTE START
           li.meal-attribute
             ion-icon.meal-icon(name='star-outline')
             span
               strong.meal-attribute__strong 4.9
               |  rating
               |                     (537)
-          // ! MEAL ATTRIBUTE END
-        // ! MEAL ATTRIBUTES BOX END
-      // ! MEAL ITEM CONTENT END
-    // ! MEAL ITEM END
-    // ! MEAL ITEM START
+          // ! FEATURE ATTRIBUTE END
+        // ! FEATURE ATTRIBUTES BOX END
+      // ! FEATURE ITEM CONTENT END
+    // ! FEATURE ITEM END
+    // ! FEATURE ITEM START
     .meal
-      // ! MEAL ITEM IMAGE START
+      // ! FEATURE ITEM IMAGE START
       .meal__image-box
         img.meal-image(loading='lazy' src='@/assets/images/features/meal-2.jpg' alt='Avocado Salad Image')
-      // ! MEAL ITEM IMAGE END
-      // ! MEAL ITEM CONTENT START
+      // ! FEATURE ITEM IMAGE END
+      // ! FEATURE ITEM CONTENT START
       .meal-content
-        // ! MEAL TAGS START
+        // ! FEATURE TAGS START
         .meal-tags
           span.meal-tag.meal-tag--vegan Vegan
           span.meal-tag.meal-tag--paleo Paleo
-        // ! MEAL TAGS END
+        // ! FEATURE TAGS END
         p.meal-title Avocado Salad
-        // ! MEAL ATTRIBUTES BOX START
+        // ! FEATURE ATTRIBUTES BOX START
         ul.meal-attributes
-          // ! MEAL ATTRIBUTE START
+          // ! FEATURE ATTRIBUTE START
           li.meal-attribute
             ion-icon.meal-icon(name='flame-outline')
             //
@@ -76,25 +76,25 @@ section#features.section-features
             span
               strong.meal-attribute__strong 400
               | calories
-          // ! MEAL ATTRIBUTE END
-          // ! MEAL ATTRIBUTE START
+          // ! FEATURE ATTRIBUTE END
+          // ! FEATURE ATTRIBUTE START
           li.meal-attribute
             ion-icon.meal-icon(name='restaurant-outline')
             span
               | NutriScore &reg;
               strong.meal-attribute__strong 92
-          // ! MEAL ATTRIBUTE END
-          // ! MEAL ATTRIBUTE START
+          // ! FEATURE ATTRIBUTE END
+          // ! FEATURE ATTRIBUTE START
           li.meal-attribute
             ion-icon.meal-icon(name='star-outline')
             span
               strong.meal-attribute__strong 4.8
               |  rating
               |                     (441)
-          // ! MEAL ATTRIBUTE END
-        // ! MEAL ATTRIBUTES BOX END
-      // ! MEAL ITEM CONTENT END
-    // ! MEAL ITEM END
+          // ! FEATURE ATTRIBUTE END
+        // ! FEATURE ATTRIBUTES BOX END
+      // ! FEATURE ITEM CONTENT END
+    // ! FEATURE ITEM END
     // ! DIET BOX START
     .diet
       h3.heading-tertiary Works with any diet:
@@ -138,7 +138,7 @@ section#features.section-features
     // ! DIET BOX END
   .container.center-text
     a.link.meal-all-recipes(href='#') See all recipes &rarr;
-// ! SECTION MEALS END
+// ! SECTION FEATURES END
 </template>
 <style lang="scss">
 .meal {

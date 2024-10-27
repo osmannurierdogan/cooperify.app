@@ -7,7 +7,7 @@ header.header
     ul.nav-main__list
       li
         a.nav-main__link(href='#how') How it works
-      li
+      //- li
         a.nav-main__link(href='#features') Features
       li
         a.nav-main__link(href='#testimonials') Testimonials

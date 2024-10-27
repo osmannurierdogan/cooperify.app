@@ -9,49 +9,44 @@ section#testimonials.section-testimonials
       figure.testimonial
         img.testimonial-image(loading='lazy' src='@/assets/images/customers/dave.jpg' alt='Dave Bryson Photo')
         blockquote.testimonial-text
-          | Inexpensive, healthy and great-tasting features, without even
-          | having to order manually! It feels truly magical.
-        p.testimonial-name &mdash; Dave Bryson
+          | This app has completely transformed my daily routine! 
+          | I feel sharper, more focused, and ready to tackle my goals every day.
+        p.testimonial-name &mdash; Alex Turner
       // ! TESTIMONIAL ITEM END
       // ! TESTIMONIAL ITEM START
       figure.testimonial
         img.testimonial-image(loading='lazy' src='@/assets/images/customers/ben.jpg' alt='Ben Hadley Photo')
         blockquote.testimonial-text
-          | The AI algorithm is crazy good, it chooses the right features for
-          | me every time. It&apos;s amazing not to worry about food anymore!
-        p.testimonial-name &mdash; Ben Hadley
+          | Such a game-changer for productivity! I’m getting so much more done without feeling overwhelmed.
+        p.testimonial-name &mdash; Megan Davis
       // ! TESTIMONIAL ITEM END
       // ! TESTIMONIAL ITEM START
       figure.testimonial
         img.testimonial-image(loading='lazy' src='@/assets/images/customers/steve.jpg' alt='Steve Miller Photo')
         blockquote.testimonial-text
-          | Omnifood is a life saver! I just started a company, so there&apos;s
-          | no time for cooking. I couldn&apos;t live without my daily features now!
-        p.testimonial-name &mdash; Steve Miller
+          | I love how this app helps me stay mentally sharp and focused. It’s like a personal coach for my mind!
+        p.testimonial-name &mdash; Jordan Lee
       // ! TESTIMONIAL ITEM END
       // ! TESTIMONIAL ITEM START
       figure.testimonial
         img.testimonial-image(loading='lazy' src='@/assets/images/customers/hannah.jpg' alt='Hannah Smith Photo')
         blockquote.testimonial-text
-          | I got Omnifood for the whole family, and it frees up so much
-          | time! Plus, everything is organic and vegan and without plastic.
-        p.testimonial-name &mdash; Hannah Smith
+          | Since using this app, I feel more organized and in control of my life. The improvements in my willpower are unbelievable!
+        p.testimonial-name &mdash; Samantha Green
       // ! TESTIMONIAL ITEM END
       // ! TESTIMONIAL ITEM START
       figure.testimonial
         img.testimonial-image(loading='lazy' src='@/assets/images/customers/ben.jpg' alt='Ben Hadley Photo')
         blockquote.testimonial-text
-          | The AI algorithm is crazy good, it chooses the right features for
-          | me every time. It&apos;s amazing not to worry about food anymore!
-        p.testimonial-name &mdash; Ben Hadley
+          | I’ve never been so consistent with my self-growth until now! It’s simple yet incredibly effective for building focus and resilience.
+        p.testimonial-name &mdash; Lucas Ramirez
       // ! TESTIMONIAL ITEM END
       // ! TESTIMONIAL ITEM START
       figure.testimonial
-        img.testimonial-image(loading='lazy' src='@/assets/images/customers/dave.jpg' alt='Dave Bryson Photo')
+        img.testimonial-image(loading='lazy' src='@/assets/images/customers/hannah.jpg' alt='Dave Bryson Photo')
         blockquote.testimonial-text
-          | Inexpensive, healthy and great-tasting features, without even
-          | having to order manually! It feels truly magical.
-        p.testimonial-name &mdash; Dave Bryson
+          | The daily challenges are just what I need to stay on top of my game. This app is a must-have for anyone wanting to boost their intellect.
+        p.testimonial-name &mdash; Ella Scott
       // ! TESTIMONIAL ITEM END
   // ! TESTIMONIAL GALLERY START
   div.gallery

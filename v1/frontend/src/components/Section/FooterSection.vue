@@ -6,6 +6,7 @@ footer#footer.footer
     div.footer__column--logo
       a.footer-logo(href='#')
         img(loading='lazy' src='@/assets/images/logo-rectangle/4.png' alt='Cooperify Logo')
+      a.holding-info.footer-links-item(href="#") A company of Osiz Limited
       ul.footer-links
         li
           a.footer-links-item(href='#')
@@ -19,7 +20,7 @@ footer#footer.footer
       p.footer-copyright
         | Copyright &copy; 
         span.year {{ new Date().getFullYear() }}
-        |  by Omnifood, Inc. All rights reserved.
+        |  by Cooperify, Inc. All rights reserved.
     // ! FOOTER COLUMN END
     // ! FOOTER COLUMN START
     div.footer__column--address
@@ -30,8 +31,8 @@ footer#footer.footer
         p
           a.footer-links-item(href='#') +44 123 654 789
           br
-          a.footer-links-item(href='#')
-            | exaxmple@gmail.com
+          a.footer-links-item(href='mailto:osman@osizagency.com')
+            | osman@osizagency.com
     // ! FOOTER COLUMN END
     // ! FOOTER COLUMN START
     div.footer__column--navigation
@@ -51,11 +52,11 @@ footer#footer.footer
       p.heading-footer Company
       ul.nav-footer
         li
-          a.footer-links-item(href='#') About Omnifood
+          a.footer-links-item(href='#') About Cooperify
         li
           a.footer-links-item(href='#') For Business
         li
-          a.footer-links-item(href='#') Cooking partners
+          a.footer-links-item(href='#') Coaches
         li
           a.footer-links-item(href='#') Careers
     // ! FOOTER COLUMN END
@@ -105,13 +106,13 @@ footer#footer.footer
 
   &-logo {
     display: block;
-    margin-bottom: 3.2rem;
-
+    margin-bottom: 1.6rem;
+    
     & img {
       width: 100%;
     }
   }
-
+  
   &-copyright {
     font-size: 1.4rem;
     line-height: 1.6;
@@ -124,13 +125,13 @@ footer#footer.footer
   display: flex;
   flex-direction: row;
   gap: 2.4rem;
-
+  
   &-item {
     &-icon {
       width: 2.4rem;
       height: 2.4rem;
     }
-
+    
     &:link,
     &:visited {
       color: variables.$color-gray-6;
@@ -138,7 +139,7 @@ footer#footer.footer
       font-size: 1.6rem;
       transition: all 0.3s;
     }
-
+    
     &:hover,
     &:active {
       color: variables.$color-gray-1;
@@ -157,6 +158,11 @@ footer#footer.footer
 
 .address {
   margin-bottom: 2.4rem;
+}
+
+.holding-info {
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 </style>
 <script setup>

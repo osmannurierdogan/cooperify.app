@@ -44,7 +44,7 @@ main
   HeroSection
   FeaturedInSection
   HowItWorksSection
-  FeaturesSection
+  //- FeaturesSection
   TestimonialsSection
   PricingSection
   CallToActionSection

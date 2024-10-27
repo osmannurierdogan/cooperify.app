@@ -5,7 +5,7 @@ section#price.section-pricing
   div.container
     span.heading-sub Pricing
     h2.heading-secondary
-      | Eating well without breaking the bank
+      | Self improvement without breaking the bank
   // ! SECTION PRICING TITLE END
   // ! SECTION PRICING PLAN BOX START
   div.container.grid.grid--2-cols.grid--align-center.margin-bottom-medium
@@ -13,12 +13,12 @@ section#price.section-pricing
     div.pricing-plan.pricing-plan--starter
       // ! PRICING PLAN HEADER START
       header.pricing-plan__header
-        span.heading-sub.pricing-plan__name.center-text Starter
+        span.heading-sub.pricing-plan__name.center-text Monthly
         p.pricing-plan__price
           span $
-          |                 399
+          | 19.99
         p.pricing-plan__text
-          | per month. That&apos;s just $13 per meal!
+          | per month. That&apos;s just $0.66 per day!
       // ! PRICING PLAN HEADER END
       // ! PRICING PLAN LIST START
       ul.list
@@ -41,19 +41,19 @@ section#price.section-pricing
       // ! PRICING PLAN LIST END
       // ! PRICING PLAN BUTTON START
       div.pricing-plan__sign-up
-        a.button.button--full(href='#cta') Start eating well
+        a.button.button--full(href='#cta') Get access now
       // ! PRICING PLAN BUTTON END
     // ! SECTION PRICING PLAN CARD END
     // ! SECTION PRICING PLAN CARD START
     div.pricing-plan.pricing-plan--complete
       // ! PRICING PLAN HEADER START
       header.pricing-plan__header
-        span.heading-sub.pricing-plan__name.center-text Complete
+        span.heading-sub.pricing-plan__name.center-text Yearly
         p.pricing-plan__price
           span $
-          |                 649
+          | 199.99
         p.pricing-plan__text
-          | per month. That&apos;s just $11 per meal!
+          | per month. That&apos;s just $0.54 per day!
       // ! PRICING PLAN HEADER END
       // ! PRICING PLAN LIST START
       ul.list
@@ -72,15 +72,15 @@ section#price.section-pricing
         li.list-item
           // ? alternative icon <ion-icon name="checkmark-circle"></ion-icon>
           ion-icon.plan-icon.list-item-icon(name='checkmark-circle-outline')
-          |                 Delivery is free
+          | Delivery is free
         li.list-item
           // ? alternative icon <ion-icon name="checkmark-circle"></ion-icon>
           ion-icon.plan-icon.list-item-icon(name='checkmark-circle-outline')
-          |                 Get access to latest recipes
+          | Get access to latest recipes
       // ! PRICING PLAN LIST END
       // ! PRICING PLAN BUTTON START
       div.pricing-plan__sign-up
-        a.button.button--full(href='#cta') Start eating well
+        a.button.button--full(href='#cta') Get access now
       // ! PRICING PLAN BUTTON END
     // ! SECTION PRICING PLAN CARD END
   // ! SECTION PRICING PLAN BOX END
@@ -173,11 +173,12 @@ section#price.section-pricing
     padding: 4.8rem;
 
     &::after {
-      content: 'Best value';
+      // content: 'Best value';
+      content: '2 months free';
       text-transform: uppercase;
       font-size: 1.4rem;
       font-weight: 700;
-      top: 6%;
+      top: 10%;
       right: -22%;
       color: variables.$color-gray-2;
       position: absolute;
