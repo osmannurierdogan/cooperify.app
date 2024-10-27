@@ -5,7 +5,7 @@ section#how.section-how
   div.container
     span.heading-sub  How it works 
     h2.heading-secondary
-      | Your self improvement process in 5 simple steps
+      | Self improvement in only 5 simple steps
   // ! HOW IT WORKS TITLE CONTAINER END
   // ! HOW IT WORKS CONTENT CONTAINER START
   div.container
@@ -110,9 +110,19 @@ section#how.section-how
     align-items: center;
     justify-content: space-between;
 
+    @include mixins.responsive(phone) {
+      flex-direction: column-reverse;
+      gap: 4.8rem;
+    }
+
     &:nth-child(even) {
       flex-direction: row-reverse;
+
+      @include mixins.responsive(phone) {
+        flex-direction: column-reverse;
+      }
     }
+
     &:not(:last-child) {
       margin-bottom: 4.8rem;
     }
@@ -123,6 +133,10 @@ section#how.section-how
       align-items: center;
       justify-content: center;
       position: relative;
+
+      @include mixins.responsive(tab-land) {
+        width: 100%;
+      }
 
       &::before,
       &::after {
@@ -167,13 +181,19 @@ section#how.section-how
 
     &-text {
       width: 50%;
+
       /* display: flex;
 			flex-direction: column;
 			align-items: start;
 			justify-content: center; 
       ! we set the grid class align items
       ! property to center */
+      @include mixins.responsive(tab-land) {
+        width: 100%;
+      }
     }
+
+
   }
 
   &-image {

@@ -1,14 +1,20 @@
 <script setup>
-import CallToActionSection from './components/Section/CallToActionSection.vue';
-import FeaturedInSection from './components/Section/FeaturedInSection.vue';
-import FooterSection from './components/Section/FooterSection.vue';
-import HeaderSection from './components/Section/HeaderSection.vue';
-import HeroSection from './components/Section/HeroSection.vue';
-import HowItWorksSection from './components/Section/HowItWorksSection.vue';
-import FeaturesSection from './components/Section/FeaturesSection.vue';
-import PricingSection from './components/Section/PricingSection.vue';
-import TestimonialsSection from './components/Section/TestimonialsSection.vue';
+import CallToActionSection from '@/components/Section/CallToActionSection.vue';
+import FeaturedInSection from '@/components/Section/FeaturedInSection.vue';
+import FooterSection from '@/components/Section/FooterSection.vue';
+import HeaderSection from '@/components/Section/HeaderSection.vue';
+import HeroSection from '@/components/Section/HeroSection.vue';
+import HowItWorksSection from '@/components/Section/HowItWorksSection.vue';
+import FeaturesSection from '@/components/Section/FeaturesSection.vue';
+import PricingSection from '@/components/Section/PricingSection.vue';
+import TestimonialsSection from '@/components/Section/TestimonialsSection.vue';
 
+import { useStore } from 'vuex';
+const store = useStore();
+
+const getPageContent = () => {
+  return store.getters._getPageContent;
+}
 const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach((link) => {
@@ -36,15 +42,17 @@ allLinks.forEach((link) => {
   });
 });
 
+
+
 </script>
 
 <template lang="pug">
 HeaderSection
 main
-  HeroSection
+  HeroSection(:sectionContent="getPageContent()['hero']")
   FeaturedInSection
   HowItWorksSection
-  //- FeaturesSection
+  FeaturesSection
   TestimonialsSection
   PricingSection
   CallToActionSection

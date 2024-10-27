@@ -77,7 +77,7 @@ import ButtonComponent from '../Button/ButtonComponent.vue';
       background-image: linear-gradient(to right bottom,
           rgba(variables.$color-primary-light-2, 0.35),
           rgba(variables.$color-primary, 0.35)),
-        url(@/assets/images/eating.jpg);
+        url(@/assets/images/books-1.png); // url(@/assets/images/eating.jpg)
       object-fit: cover;
       background-size: cover;
       background-position: center;
