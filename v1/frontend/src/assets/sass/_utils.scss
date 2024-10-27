@@ -1,0 +1,337 @@
+@use './variables' as variables;
+@use './mixins' as mixins;
+
+// ! RESET SCSS START
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+// !  HTML5 display-role reset for older browsers
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+q {
+  quotes: none;
+  &::after,
+  &::before {
+    content: '';
+    content: none;
+  }
+}
+blockquote {
+  quotes: none;
+  &::after,
+  &::before {
+    content: '';
+    content: none;
+  }
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba($color: variables.$color-primary, $alpha: 0.5);
+}
+// ! RESET SCSS END
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  box-sizing: border-box;
+  overflow-x: hidden;
+  //scroll-behavior: smooth;
+  @include mixins.responsive(tab-land) {
+    font-size: 56.25%;
+  }
+  @include mixins.responsive(tab-port) {
+    font-size: 50%;
+  }
+}
+body {
+  font-family: variables.$rubik-font-family;
+  font-weight: 400;
+  line-height: 1;
+  color: variables.$color-gray-1;
+  overflow-x: hidden;
+}
+
+.heading {
+  &-sub {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: variables.$color-primary-dark-9;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+    /* &--gray{
+			color: $color-gray-4;
+			text-align: center;
+			margin-bottom: 2.4rem;
+		} */
+  }
+  &-featured-in {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: variables.$color-gray-4;
+  }
+  &-primary,
+  &-secondary,
+  &-tertiary {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: variables.$color-gray-2;
+  }
+  &-primary {
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin-bottom: 3.2rem;
+    @include mixins.responsive(small-desktop) {
+      font-size: 4.4rem;
+    }
+  }
+  &-secondary {
+    font-size: 4.4rem;
+    margin-bottom: 9.6rem;
+    @include mixins.responsive(tab-land) {
+      font-size: 3.6rem;
+    }
+    @include mixins.responsive(tab-small) {
+      margin-bottom: 4.8rem;
+    }
+  }
+  &-tertiary {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+    @include mixins.responsive(tab-land) {
+      font-size: 2.4rem;
+    }
+  }
+  &-footer {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+}
+.margin-right-small {
+  margin-right: 1.6rem !important;
+}
+.margin-bottom-medium {
+  margin-bottom: 4.8rem !important;
+}
+.center-text {
+  text-align: center;
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  @include mixins.responsive(tab-land) {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+  @include mixins.responsive(phone) {
+    row-gap: 4.8rem;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+  &--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+    @include mixins.responsive(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    @include mixins.responsive(tab-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mixins.responsive(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+    @include mixins.responsive(tab-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mixins.responsive(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &--5-cols {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &--6-cols {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  &:not(:last-child) {
+    margin-bottom: 9.6rem;
+  }
+  &--footer {
+    grid-template-columns: repeat(2, 1.5fr) repeat(3, 1fr);
+    @include mixins.responsive(phone) {
+      grid-template-columns: 1fr;
+    }
+    @include mixins.responsive(tab-small) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+.link {
+  &:link,
+  &:visited {
+    color: variables.$color-primary;
+    transition: all 0.3s;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+  }
+  &:hover,
+  &:active {
+    border-bottom: 1px solid transparent;
+    color: variables.$color-primary-dark-9;
+  }
+}
+.list {
+  display: flex;
+  gap: 1.6rem;
+  flex-direction: column;
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    & strong {
+      font-weight: 500;
+    }
+    &-icon {
+      width: 3rem;
+      height: 3rem;
+      color: variables.$color-primary;
+    }
+  }
+}
