@@ -52,7 +52,7 @@ main
   HeroSection(:sectionContent="getPageContent()['hero']")
   FeaturedInSection
   HowItWorksSection
-  FeaturesSection
+  //- FeaturesSection
   TestimonialsSection
   PricingSection
   CallToActionSection

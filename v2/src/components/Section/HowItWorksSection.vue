@@ -23,7 +23,8 @@ section#how.section-how
       // ? HOW IT WORKS STEP #1 TEXT END
       // ? HOW IT WORKS STEP #1 IMAGE START
       div.step-box-images
-        img.step-image(loading='lazy' src='@/assets/images/app/app-screen-1.png' alt='iPhone app preferences selection screen')
+        //- img.step-image(loading='lazy' src='@/assets/images/app/app-screen-1.png' alt='iPhone app preferences selection screen')
+        img.step-image(loading='lazy' src='@/assets/images/how-it-works/person-reading-book.jpg' alt='Person reading a book')
       // ? HOW IT WORKS STEP #1 IMAGE END
     // ! HOW IT WORKS STEP #1 END
 
@@ -41,7 +42,8 @@ section#how.section-how
       // ? HOW IT WORKS STEP #2 TEXT END
       // ? HOW IT WORKS STEP #2 IMAGE START
       div.step-box-images
-        img.step-image(loading='lazy' src='@/assets/images/app/app-screen-2.png' alt='iPhone app features approving plan')
+        //- img.step-image(loading='lazy' src='@/assets/images/app/app-screen-2.png' alt='iPhone app features approving plan')
+        img.step-image(loading='lazy' src='@/assets/images/how-it-works/habit-tracker.jpg' alt='Habit tracker')
       // ? HOW IT WORKS STEP #2 IMAGE END
     // ! HOW IT WORKS STEP #2 END
     
@@ -59,7 +61,8 @@ section#how.section-how
       // ? HOW IT WORKS STEP #3 TEXT END
       // ? HOW IT WORKS STEP #3 IMAGE START
       div.step-box-images
-        img.step-image(loading='lazy' src='@/assets/images/app/app-screen-3.png' alt='iPhone app delivery screen')
+        //- img.step-image(loading='lazy' src='@/assets/images/app/app-screen-3.png' alt='iPhone app delivery screen')
+        img.step-image(loading='lazy' src='@/assets/images/how-it-works/happy-person-completes-his-challenge.jpg' alt='Happy person completes his challenge')
       // ? HOW IT WORKS STEP #3 IMAGE END
     // ! HOW IT WORKS STEP #3 END
     
@@ -79,7 +82,8 @@ section#how.section-how
       // ? HOW IT WORKS STEP #4 TEXT END
       // ? HOW IT WORKS STEP #4 IMAGE START
       div.step-box-images
-        img.step-image(loading='lazy' src='@/assets/images/app/app-screen-1.png' alt='iPhone app preferences selection screen')
+        //- img.step-image(loading='lazy' src='@/assets/images/app/app-screen-1.png' alt='iPhone app preferences selection screen')
+        img.step-image(loading='lazy' src='@/assets/images/how-it-works/todo-list.jpg' alt='Person completing his todo list items')
       // ? HOW IT WORKS STEP #4 IMAGE END
     // ! HOW IT WORKS STEP #4 END
     
@@ -97,7 +101,8 @@ section#how.section-how
       // ? HOW IT WORKS STEP #5 TEXT END
       // ? HOW IT WORKS STEP #5 IMAGE START
       div.step-box-images
-        img.step-image(loading='lazy' src='@/assets/images/app/app-screen-2.png' alt='iPhone app features approving plan')
+        //- img.step-image(loading='lazy' src='@/assets/images/app/app-screen-2.png' alt='iPhone app features approving plan')
+        img.step-image(loading='lazy' src='@/assets/images/how-it-works/person-working-with-pomodoro-timer.jpg' alt='Person working with pomodoro timer')
       // ? HOW IT WORKS STEP #5 IMAGE END
     // ! HOW IT WORKS STEP #5 END
   // ! HOW IT WORKS CONTENT CONTAINER END
@@ -124,7 +129,8 @@ section#how.section-how
     }
 
     &:not(:last-child) {
-      margin-bottom: 4.8rem;
+      // margin-bottom: 4.8rem;
+      margin-bottom: 10%;
     }
 
     &-images {
@@ -197,7 +203,9 @@ section#how.section-how
   }
 
   &-image {
-    width: 35%;
+    // width: 35%;
+    width: 50%;
+    border-radius: 100%;
 
     @include mixins.responsive(phone) {}
   }

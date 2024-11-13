@@ -35,7 +35,7 @@ export default createStore({
             icon: "fa-solid fa-arrow-down-long",
           },
         ],
-        userCount: 1000
+        userCount: 1000,
       },
     },
     socialMediaAccounts: [
@@ -97,7 +97,7 @@ export default createStore({
     ],
     navigationMenu: [
       { id: 1, name: "How it works", target: "#how" },
-      { id: 2, name: "Features", target: "#features" },
+      // { id: 2, name: "Features", target: "#features" },
       { id: 3, name: "Testimonials", target: "#testimonials" },
       { id: 4, name: "Pricing", target: "#pricing", path: null },
       {
@@ -114,21 +114,40 @@ export default createStore({
       //   { id: 3, name: "osman@osizagency.com", target: "mailto:osman@osizagency.com" },
       // ],
       account: [
-        { id: 1, name: "Create account", target: "#" },
-        { id: 2, name: "Sign in", target: "#" },
+        {
+          id: 1,
+          name: "Create account",
+          target: "https://portal.cooperify.app/register",
+        },
+        {
+          id: 2,
+          name: "Sign in",
+          target: "https://portal.cooperify.app/login",
+        },
         { id: 3, name: "IOS app", target: "#" },
         { id: 4, name: "Android app", target: "#" },
       ],
       company: [
-        { id: 1, name: "About Cooperify", target: "#" },
+        { id: 1, name: "About Cooperify", target: "#", viewName: "About" },
         { id: 2, name: "Student discount", target: "#" },
         { id: 3, name: "Mentors", target: "#" },
         { id: 4, name: "Carrers", target: "#" },
       ],
       resources: [
         { id: 1, name: "Books", target: "https://pbdbookshelf.com/books" },
-        { id: 2, name: "Help center", target: "#" },
-        { id: 3, name: "Privacy & terms", target: "#" },
+        // { id: 2, name: "Help center", target: "#" },
+        {
+          id: 2,
+          name: "Privacy policy",
+          target: "#",
+          viewName: "PrivacyPolicy",
+        },
+        {
+          id: 3,
+          name: "Terms of service",
+          target: "#",
+          viewName: "TermsOfService",
+        },
         { id: 4, name: "Brand assets", target: "#" },
       ],
     },

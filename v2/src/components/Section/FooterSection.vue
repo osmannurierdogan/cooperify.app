@@ -6,7 +6,7 @@ footer#footer.footer
     div.footer__column--logo
       a.footer-logo(href='#')
         img(loading='lazy' src='@/assets/images/logo-rectangle/4.png' alt='Cooperify Logo')
-      a.holding-info.footer-links-item(href="#") A company of Osiz Limited
+      a.holding-info.footer-links-item(href="#") Company of Osiz Enterprises
       ul.footer-links
         li(v-for="icon in getSocialMediaAccounts()", :key="icon.id")
           a.footer-links-item(:href="icon.path")
@@ -25,15 +25,16 @@ footer#footer.footer
         p
           a.footer-links-item(href='#') +44 123 654 789
         p
-          a.footer-links-item(href='mailto:osman@osizagency.com')
-            | osman@osizagency.com
+          a.footer-links-item(href='mailto:info@cooperify.app')
+            | info@cooperify.app
     // ! FOOTER COLUMN END
 
     div.footer__column--navigation(v-for="(value, key, index) in getFooterMenu()", :key="footerMenu")
       p.heading-footer {{ key }}
       ul.nav-footer
         li(v-for="link in value")
-          a.footer-links-item(:href="link.target") {{ link.name }}
+          RouterLink.footer-links-item(v-if="link.viewName != null", :to="{name: `${link.viewName}`}") {{ link.name }}
+          a.footer-links-item(v-else, :href="link.target") {{ link.name }}
 // ! FOOTER SECTION END
 </template>
 <style lang="scss">
