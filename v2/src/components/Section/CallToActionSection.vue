@@ -4,11 +4,14 @@ section#cta.section-cta
   div.container
     div.cta
       div.cta-box-text
-        h2.heading-secondary Get your first meal for free!
+        h2.heading-secondary Get 7-days free trial!
         p.cta-text
-          | Healthy, tasty and hassle-free features are waiting for you. Start
-          | eating well today. You can cancel or pause anytime. And the
-          | first meal is on us!
+          | Want to become the better version of yourself? 
+          | Cooperify helps you to go from zero to hero by improving your 
+          | #[strong knowledge], #[strong productivity], #[strong focus] 
+          | and most importantly your #[strong willpower]!
+          | After 7-days you will be charged automatically. 
+          | You can cancel or pause anytime :)
         form.cta-form(netlify='' name='sign-up')
           div
             label(for='fullName') Full Name
@@ -77,7 +80,7 @@ import ButtonComponent from '../Button/ButtonComponent.vue';
       background-image: linear-gradient(to right bottom,
           rgba(variables.$color-primary-light-2, 0.35),
           rgba(variables.$color-primary, 0.35)),
-        url(@/assets/images/books-1.png); // url(@/assets/images/eating.jpg)
+        url(@/assets/images/how-it-works/person-working-with-pomodoro-timer.jpg); // url(@/assets/images/eating.jpg)
       object-fit: cover;
       background-size: cover;
       background-position: center;

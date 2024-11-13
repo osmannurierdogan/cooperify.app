@@ -19,7 +19,8 @@ section#hero.section-hero
           img(loading='lazy' src='@/assets/images/customers/customer-6.jpg' alt='Customer Photo')
         p.features-delivered__text #[span {{ props.sectionContent.userCount }}+] users changed their lives
     .hero-image-box
-      img.hero-image(loading='lazy' src='@/assets/images/hero.png' alt='Woman enjoying food, features in storage container, and food bowls on a table.')
+      //- img.hero-image(loading='lazy' src='@/assets/images/hero.png' alt='Woman enjoying food, features in storage container, and food bowls on a table.')
+      img.hero-image(loading='lazy' src='@/assets/images/cooperify-hero.png' alt='Woman enjoying food, features in storage container, and food bowls on a table.')
 // ! SECTION HERO END
 </template>
 <script setup>
@@ -64,6 +65,7 @@ const props = defineProps({
 
   &-image {
     width: 100%;
+    border-radius: 2rem;
 
     @include mixins.responsive(tab-port) {
       width: 60%;
