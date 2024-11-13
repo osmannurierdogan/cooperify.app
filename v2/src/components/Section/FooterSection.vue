@@ -25,8 +25,8 @@ footer#footer.footer
         p
           a.footer-links-item(href='#') +44 123 654 789
         p
-          a.footer-links-item(href='mailto:osman@osizagency.com')
-            | osman@osizagency.com
+          a.footer-links-item(href='mailto:info@cooperify.app')
+            | info@cooperify.app
     // ! FOOTER COLUMN END
 
     div.footer__column--navigation(v-for="(value, key, index) in getFooterMenu()", :key="footerMenu")
